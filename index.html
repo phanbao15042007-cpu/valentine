@@ -34,13 +34,15 @@ if (localStorage.getItem("musicPlaying") === "true") {
 function goToPart2() {
     localStorage.setItem("musicPlaying", "true");
     music.play();
-    window.location.href = "../2/index.html";
+    window.location.href = "2/index.html";  // sửa chỗ này
 }
 </script>
+
 <footer>
     <button class="pink-btn" onclick="goToPart2()">
         Sang Phần 2 💖
     </button>
 </footer>
 </body>
+
 </html>

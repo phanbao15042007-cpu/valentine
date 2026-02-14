@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Flip Book</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="hedlinecontainer">
+    <div id="shine">Happy Valentine's Day💞</div>
+  </div>
+  <div class="gallery">
+    <img src="./img/img1.jpg" alt="a lovely kiss in the night">
+    <img src="./img/img2.jpg" alt="a women inside a car">
+    <img src="./img/img3.jpg" alt="a baby">
+    <img src="./img/img4.jpg" alt="a girl in the forest">
+    <img src="./img/img5.jpg" alt="a girl">
+  </div>
+ <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bg-music");
+
+// Nếu đã bật trước đó thì tự phát lại
+if (localStorage.getItem("musicPlaying") === "true") {
+    music.play();
+}
+
+// Khi click nút sang phần 2
+function goToPart2() {
+    localStorage.setItem("musicPlaying", "true");
+    music.play();
+    window.location.href = "../2/index.html";
+}
+</script>
+<footer>
+    <button class="pink-btn" onclick="goToPart2()">
+        Sang Phần 2 💖
+    </button>
+</footer>
+</body>
+</html>

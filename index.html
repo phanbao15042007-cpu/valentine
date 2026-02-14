@@ -23,19 +23,7 @@
 </audio>
 
 <script>
-const music = document.getElementById("bg-music");
-
-// Nếu đã bật trước đó thì tự phát lại
-if (localStorage.getItem("musicPlaying") === "true") {
-    music.play();
-}
-
-// Khi click nút sang phần 2
-function goToPart2() {
-    localStorage.setItem("musicPlaying", "true");
-    music.play();
-    window.location.href = "2/index.html";  // sửa chỗ này
-}
+  window.location.href = "2/index.html";
 </script>
 
 <footer>
@@ -46,3 +34,4 @@ function goToPart2() {
 </body>
 
 </html>
+
